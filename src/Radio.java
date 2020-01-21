@@ -1,8 +1,8 @@
 public class Radio {
     private int volume = 0;
     private int station = 1;
-    private int maxVolume = 30;
-    private int maxStation = 50;
+    private int maxVolume = 10;
+    private int maxStation = 10;
     private boolean state = false;
 
     public void on(){
@@ -12,7 +12,7 @@ public class Radio {
 
     public void off(){
         System.out.println("Radio Off");
-        this.state = true;
+        this.state = false;
     }
 
     public void volumeUp(){
