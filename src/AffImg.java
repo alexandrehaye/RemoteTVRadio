@@ -26,9 +26,30 @@ public class AffImg extends Panel {
 	
 	  private static final long serialVersionUID = 1L;
 	  private Image image;
-	  private Image Imgchanel;
+	  private Image Imgbrazers;
+	  private Image Imgchasseetpeche;
+	  private Image Imgcmonchoix;
+	  private Image Imgcurling;
+	  private Image Imgmoins18;
+	  private Image Imgnext;
+	  private Image Imgpetanque;
+	  private Image Imgpimp;
 	  
 	  
+	  File brazers = new File("src/brazers.jpg");
+	  File chasseetpeche = new File("src/chasseetpeche.jpg");
+	  File cmonchoix = new File("src/cmonchoix.jpg");
+	  File curling = new File("src/curling.jpg");
+	  File moins18 = new File("src/moins18.png");
+	  File next = new File("src/NEXT.jpg");
+	  File petanque = new File("src/petanque.jpg");
+	  File pimp = new File("src/pimp.jpg");
+	  
+	  File koba = new File("src/koba.wav");
+	  File jul = new File("src/jul.wav");
+	  File bim = new File("src/bimbamboum.wav");
+	  File salut = new File("src/salut.wav");
+	  File tono = new File("src/tono.wav");
 	
   
 	  public AffImg(String filename) {
@@ -164,24 +185,100 @@ public class AffImg extends Panel {
 		g2.draw(Radioonoff);
 		
 		
-		File ch5Img = new File("src/C8.png");
+		/*File brazersImg = new File("src/brazers.jpg");
+		 */
 		try {
-	    	Imgchanel = ImageIO.read(ch5Img);		
+	    	Imgbrazers = ImageIO.read(brazers);		
 		}
 		catch(IOException ex) {
-			System.out.println("Image Not Found");
+			System.out.println("Error, TV chanel unavailable");
 		}
-	
+		g.drawImage(Imgbrazers,101,42,232,131,null,null);
 		
-		g.drawImage(Imgchanel,101,42,232,131,null,null);
+		/*Imgchasseetpeche;
+		  private Image Imgcmonchoix;
+		  private Image Imgcurling;
+		  private Image Imgmoins18;
+		  private Image Imgnext;
+		  private Image Imgpetanque;
+		  private Image Imgpimp;*/
+		
+		//
+		//TEST POUR CHAQUE IMAGE
+		//  
+		  
+		try {
+			
+			Imgchasseetpeche = ImageIO.read(chasseetpeche);		
+		}
+		catch(IOException ex) {
+			System.out.println("Error, TV chanel unavailable");
+		}
+		g.drawImage(Imgchasseetpeche,101,42,232,131,null,null);
+		
+		
+		
+		try {
+			
+			Imgnext = ImageIO.read(next);		
+		}
+		catch(IOException ex) {
+			System.out.println("Error, TV chanel unavailable");
+		}
+		g.drawImage(Imgnext,101,42,232,131,null,null);
+		
+		try {
+			
+			Imgpimp = ImageIO.read(pimp);		
+		}
+		catch(IOException ex) {
+			System.out.println("Error, TV chanel unavailable");
+		}
+		g.drawImage(Imgpimp,101,42,232,131,null,null);
+		
+		try {
+			
+			Imgpetanque = ImageIO.read(petanque);		
+		}
+		catch(IOException ex) {
+			System.out.println("Error, TV chanel unavailable");
+		}
+		g.drawImage(Imgpetanque,101,42,232,131,null,null);
+		
+		try {
+			
+			Imgmoins18 = ImageIO.read(moins18);		
+		}
+		catch(IOException ex) {
+			System.out.println("Error, TV chanel unavailable");
+		}
+		g.drawImage(Imgmoins18,101,42,232,131,null,null);
+		
+		try {
+			
+			Imgcurling = ImageIO.read(curling);		
+		}
+		catch(IOException ex) {
+			System.out.println("Error, TV chanel unavailable");
+		}
+		g.drawImage(Imgcurling,101,42,232,131,null,null);
+		
+		try {
+			
+			Imgcmonchoix = ImageIO.read(cmonchoix);		
+		}
+		catch(IOException ex) {
+			System.out.println("Error, TV chanel unavailable");
+		}
+		g.drawImage(Imgcmonchoix,101,42,232,131,null,null);
+		
 		int rad = 1;
-		File Chanel1 = new File("src/0999.wav");
-		File Chanel2 = new File("src/0579.wav");
+		
 		try {
 		Clip clip1 = AudioSystem.getClip();
-		clip1.open(AudioSystem.getAudioInputStream(Chanel1));
+		clip1.open(AudioSystem.getAudioInputStream(salut));
 		Clip clip2 = AudioSystem.getClip();
-		clip2.open(AudioSystem.getAudioInputStream(Chanel2));
+		clip2.open(AudioSystem.getAudioInputStream(jul));
 		
 		
 		if (rad == 1) {
@@ -195,7 +292,7 @@ public class AffImg extends Panel {
 	  }
 		}
 		catch(Exception ex) {
-			System.out.println("Error in getting total channel of the radio");
+			System.out.println("Error, Radio chanel unavailable");
 		} 
 		
 	  }

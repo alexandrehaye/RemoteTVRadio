@@ -23,7 +23,7 @@ public class Back {
 	//CLASS PAS UTILISE POUR LE MOMENT
 	
 	private Image image;
-	  //private Image bouton;
+	  private Image bouton;
 	  private Image Imgchanel;
 	  
 	
