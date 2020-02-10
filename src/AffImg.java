@@ -36,20 +36,20 @@ public class AffImg extends Panel {
 	  private Image Imgpimp;
 	  
 	  
-	  File brazers = new File("src/image/brazers.jpg");
-	  File chasseetpeche = new File("src/image/chasseetpeche.jpg");
-	  File cmonchoix = new File("src/image/cmonchoix.jpg");
-	  File curling = new File("src/image/curling.jpg");
-	  File moins18 = new File("src/image/moins18.png");
-	  File next = new File("src/image/NEXT.jpg");
-	  File petanque = new File("src/image/petanque.jpg");
-	  File pimp = new File("src/image/pimp.jpg");
+	  File brazers = new File("src/img/brazers.jpg");
+	  File chasseetpeche = new File("src/img/chasseetpeche.jpg");
+	  File cmonchoix = new File("src/img/cmonchoix.jpg");
+	  File curling = new File("src/img/curling.jpg");
+	  File moins18 = new File("src/img/moins18.png");
+	  File next = new File("src/img/NEXT.jpg");
+	  File petanque = new File("src/img/petanque.jpg");
+	  File pimp = new File("src/img/pimp.jpg");
 	  
-	  File koba = new File("src/koba.wav");
-	  File jul = new File("src/jul.wav");
-	  File bim = new File("src/bimbamboum.wav");
-	  File salut = new File("src/salut.wav");
-	  File tono = new File("src/tono.wav");
+	  File koba = new File("src/music/koba.wav");
+	  File jul = new File("src/music/jul.wav");
+	  File bim = new File("src/music/bimbamboum.wav");
+	  File salut = new File("src/music/salut.wav");
+	  File tono = new File("src/music/tono.wav");
 	
   
 	  public AffImg(String filename) {
