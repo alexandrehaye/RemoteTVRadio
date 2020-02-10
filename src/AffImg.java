@@ -36,14 +36,14 @@ public class AffImg extends Panel {
 	  private Image Imgpimp;
 	  
 	  
-	  File brazers = new File("src/brazers.jpg");
-	  File chasseetpeche = new File("src/chasseetpeche.jpg");
-	  File cmonchoix = new File("src/cmonchoix.jpg");
-	  File curling = new File("src/curling.jpg");
-	  File moins18 = new File("src/moins18.png");
-	  File next = new File("src/NEXT.jpg");
-	  File petanque = new File("src/petanque.jpg");
-	  File pimp = new File("src/pimp.jpg");
+	  File brazers = new File("src/image/brazers.jpg");
+	  File chasseetpeche = new File("src/image/chasseetpeche.jpg");
+	  File cmonchoix = new File("src/image/cmonchoix.jpg");
+	  File curling = new File("src/image/curling.jpg");
+	  File moins18 = new File("src/image/moins18.png");
+	  File next = new File("src/image/NEXT.jpg");
+	  File petanque = new File("src/image/petanque.jpg");
+	  File pimp = new File("src/image/pimp.jpg");
 	  
 	  File koba = new File("src/koba.wav");
 	  File jul = new File("src/jul.wav");
