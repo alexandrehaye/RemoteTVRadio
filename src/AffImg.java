@@ -118,73 +118,7 @@ public class AffImg extends Panel {
 		g2.setColor(Color.BLACK);
 		int volR = 1;
 		g2.drawString(String.valueOf(volR), 970, 300);
-		
-		//BOUTON Chanel TV +
-		Rectangle2D ChanelTVplus = new Rectangle2D.Double(468,346,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(ChanelTVplus);
-		
-		//BOUTON Chanel TV -
-		Rectangle2D ChanelTVmoins = new Rectangle2D.Double(468,393,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(ChanelTVmoins);
-
-		//BOUTON Vol TV +
-		Rectangle2D VolTVplus = new Rectangle2D.Double(516,346,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(VolTVplus);
-		
-		//BOUTON Vol TV -
-		Rectangle2D VolTVmoins = new Rectangle2D.Double(516,393,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(VolTVmoins);	
-		
-		//BOUTON Chanel Radio +
-		Rectangle2D ChanelRadioplus = new Rectangle2D.Double(657,346,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(ChanelRadioplus);
-		
-		//BOUTON Chanel Radio -
-		Rectangle2D ChanelRadiomoins = new Rectangle2D.Double(657,393,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(ChanelRadiomoins);
-
-		//BOUTON Vol Radio +
-		Rectangle2D VolRadioplus = new Rectangle2D.Double(705,346,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(VolRadioplus);
-		
-		//BOUTON Vol Radio -
-		Rectangle2D VolRadiomoins = new Rectangle2D.Double(705,393,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(VolRadiomoins);		
-		
-		//BOUTON All ON
-		Rectangle2D Allon = new Rectangle2D.Double(588,319,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(Allon);	
-		
-		//BOUTON All OFF
-		Rectangle2D Alloff = new Rectangle2D.Double(588,364,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(Alloff);	
-	  
-		//BOUTON Undo
-		Rectangle2D Undo = new Rectangle2D.Double(588,413,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(Undo);
-		
-		//BOUTON TVONOFF
-		Rectangle2D Tvonoff = new Rectangle2D.Double(447,300,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(Tvonoff);
-		
-		//BOUTON RADIOONOFF
-		Rectangle2D Radioonoff = new Rectangle2D.Double(734,300,30,30);
-		g2.setColor(Color.BLUE);
-		g2.draw(Radioonoff);
-		
-		
+	
 		/*File brazersImg = new File("src/brazers.jpg");
 		 */
 		try {
