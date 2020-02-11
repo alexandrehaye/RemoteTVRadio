@@ -2,6 +2,10 @@ import java.awt.Label;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.Console;
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 import javax.swing.JFrame;
 
@@ -85,6 +89,19 @@ public class Main extends JFrame implements MouseListener {
     Main app = new Main("REMOTE");
     app.setVisible(true);
     Radio radio = new Radio();
+
+    Logger logger = Logger.getLogger("MyLog");
+    FileHandler fh;
+    try {
+      fh = new FileHandler("radio.log");
+      logger.addHandler(fh);
+      SimpleFormatter formatter = new SimpleFormatter();
+      fh.setFormatter(formatter);
+      logger.info("hello");
+    } catch(IOException e) {
+      e.printStackTrace();
+    }
+
     Telecommande telecommandeRadio = new Telecommande(new Commande_RadioOn(radio), new Commande_RadioOff(radio),
         new Commande_RadioPrevStation(radio), new Commande_RadioNextStation(radio), new Commande_RadioVolumeDown(radio),
         new Commande_RadioVolumeUp(radio));
