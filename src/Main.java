@@ -57,27 +57,35 @@ public class Main extends JFrame implements MouseListener {
     }
     if (e.getX() > 657 && e.getY() > 393 && e.getX() < 687 && e.getY() < 423 ) {
       System.out.print("BOUTON Chanel Radio -\n");
+      
     }
     if (e.getX() > 705 && e.getY() > 346 && e.getX() < 735 && e.getY() < 376 ) {
       System.out.print("BOUTON Vol Radio +\n");
+
     }
     if (e.getX() > 705 && e.getY() > 393 && e.getX() < 735 && e.getY() < 423 ) {
       System.out.print("BOUTON Vol Radio -\n");
+
     }
     if (e.getX() > 588 && e.getY() > 319 && e.getX() < 608 && e.getY() < 349 ) {
       System.out.print("BOUTON ALL ON\n");
+
     }
     if (e.getX() > 588 && e.getY() > 364 && e.getX() < 608 && e.getY() < 394 ) {
       System.out.print("BOUTON ALL OFF\n");
+      
     }
     if (e.getX() > 588 && e.getY() > 413 && e.getX() < 608 && e.getY() < 443 ) {
       System.out.print("BOUTON Undo \n");
+      
     }
     if (e.getX() > 447 && e.getY() > 300 && e.getX() < 477 && e.getY() < 330 ) {
       System.out.print("BOUTON TVONOFF\n");
+
     }
     if (e.getX() > 734 && e.getY() > 300 && e.getX() < 764 && e.getY() < 330 ) {
       System.out.print("BOUTON RADIOONOFF\n");
+
     }
   }
 
