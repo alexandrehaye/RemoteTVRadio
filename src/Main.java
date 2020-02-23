@@ -1,8 +1,8 @@
 import java.awt.Label;
-import java.awt.*;
+//import java.awt.*;
 import java.awt.event.*;
-import java.io.Console;
-
+//import java.io.Console;
+//import javax.swing.*;
 import javax.swing.JFrame;
 
 public class Main extends JFrame implements MouseListener {
@@ -17,88 +17,89 @@ public class Main extends JFrame implements MouseListener {
   }
 
   private void init() {
-    AffImg afficheImage = new AffImg("remotefin.png");
-
-    this.add(afficheImage);
-    this.setLocation(0, 0);
-    this.pack();
-    this.setResizable(false);
-    afficheImage.addMouseListener(this);
-  }
-
-  public void mouseEntered(MouseEvent e) {
-  }
-
-  public void mouseExited(MouseEvent e) {
-  }
-
-  public void mousePressed(MouseEvent e) {
-  }
-
-  public void mouseReleased(MouseEvent e) {
-  }
-
-  public void mouseClicked(MouseEvent e) {
-    ///DEBUTS DES CONDITIONS
-    if (e.getX() > 468 && e.getY() > 346 && e.getX() < 498 && e.getY() < 376 ) {
-      System.out.print("BOUTON Chanel TV +\n");
-    }
-    if (e.getX() > 468 && e.getY() > 393 && e.getX() < 498 && e.getY() < 423 ) {
-      System.out.print("BOUTON Chanel TV -\n");
-    }
-    if (e.getX() > 516 && e.getY() > 346 && e.getX() < 546 && e.getY() < 376 ) {
-      System.out.print("BOUTON Vol TV +\n");
-    }
-    if (e.getX() > 516 && e.getY() > 393 && e.getX() < 546 && e.getY() < 423 ) {
-      System.out.print("BOUTON Vol TV -\n");
-    }
-    if (e.getX() > 657 && e.getY() > 346 && e.getX() < 687 && e.getY() < 376 ) {
-      System.out.print("BOUTON Chanel Radio +\n");
-    }
-    if (e.getX() > 657 && e.getY() > 393 && e.getX() < 687 && e.getY() < 423 ) {
-      System.out.print("BOUTON Chanel Radio -\n");
-      
-    }
-    if (e.getX() > 705 && e.getY() > 346 && e.getX() < 735 && e.getY() < 376 ) {
-      System.out.print("BOUTON Vol Radio +\n");
-
-    }
-    if (e.getX() > 705 && e.getY() > 393 && e.getX() < 735 && e.getY() < 423 ) {
-      System.out.print("BOUTON Vol Radio -\n");
-
-    }
-    if (e.getX() > 588 && e.getY() > 319 && e.getX() < 608 && e.getY() < 349 ) {
-      System.out.print("BOUTON ALL ON\n");
-
-    }
-    if (e.getX() > 588 && e.getY() > 364 && e.getX() < 608 && e.getY() < 394 ) {
-      System.out.print("BOUTON ALL OFF\n");
-      
-    }
-    if (e.getX() > 588 && e.getY() > 413 && e.getX() < 608 && e.getY() < 443 ) {
-      System.out.print("BOUTON Undo \n");
-      
-    }
-    if (e.getX() > 447 && e.getY() > 300 && e.getX() < 477 && e.getY() < 330 ) {
-      System.out.print("BOUTON TVONOFF\n");
-
-    }
-    if (e.getX() > 734 && e.getY() > 300 && e.getX() < 764 && e.getY() < 330 ) {
-      System.out.print("BOUTON RADIOONOFF\n");
-
-    }
+    
   }
 
   public static void main(String[] args) {
     Main app = new Main("REMOTE");
+    AffImg afficheImage = new AffImg("remotefin.png");
+    app.add(afficheImage);
+    app.setLocation(0, 0);
+    app.pack();
+    app.setResizable(false);
     app.setVisible(true);
     Radio radio = new Radio();
+    Television television = new Television();
+
+    afficheImage.addMouseListener(new MouseAdapter() {
+      public void mouseClicked(MouseEvent e) { 
+
+        // change text of button after click
+
+        if (e.getX() > 468 && e.getY() > 346 && e.getX() < 498 && e.getY() < 376 ) {
+          System.out.print("BOUTON Chanel TV +\n");
+          new Commande_TelevisionNextChannel(television).execute();
+        }
+        if (e.getX() > 468 && e.getY() > 393 && e.getX() < 498 && e.getY() < 423 ) {
+          System.out.print("BOUTON Chanel TV -\n");
+          new Commande_TelevisionPrevChannel(television).execute();
+        }
+        if (e.getX() > 516 && e.getY() > 346 && e.getX() < 546 && e.getY() < 376 ) {
+          System.out.print("BOUTON Vol TV +\n");
+          new Commande_TelevisionVolumeUp(television).execute();
+        }
+        if (e.getX() > 516 && e.getY() > 393 && e.getX() < 546 && e.getY() < 423 ) {
+          System.out.print("BOUTON Vol TV -\n");
+          new Commande_TelevisionVolumeDown(television).execute();
+        }
+        if (e.getX() > 657 && e.getY() > 346 && e.getX() < 687 && e.getY() < 376 ) {
+          System.out.print("BOUTON Chanel Radio +\n");
+          new Commande_RadioNextStation(radio).execute();
+        }
+        if (e.getX() > 657 && e.getY() > 393 && e.getX() < 687 && e.getY() < 423 ) {
+          System.out.print("BOUTON Chanel Radio -\n");
+          new Commande_RadioPrevStation(radio).execute();
+          
+        }
+        if (e.getX() > 705 && e.getY() > 346 && e.getX() < 735 && e.getY() < 376 ) {
+          System.out.print("BOUTON Vol Radio +\n");
+          new Commande_RadioVolumeUp(radio).execute();
+        }
+        if (e.getX() > 705 && e.getY() > 393 && e.getX() < 735 && e.getY() < 423 ) {
+          System.out.print("BOUTON Vol Radio -\n");
+          new Commande_RadioVolumeDown(radio).execute();
+    
+        }
+        if (e.getX() > 588 && e.getY() > 319 && e.getX() < 608 && e.getY() < 349 ) {
+          System.out.print("BOUTON ALL ON\n");
+          new Commande_AllOn(radio, television).execute();
+        }
+        if (e.getX() > 588 && e.getY() > 364 && e.getX() < 608 && e.getY() < 394 ) {
+          System.out.print("BOUTON ALL OFF\n");
+          new Commande_AllOff(radio, television).execute();
+          
+        }
+        if (e.getX() > 588 && e.getY() > 413 && e.getX() < 608 && e.getY() < 443 ) {
+          System.out.print("BOUTON Undo \n");
+          
+          
+        }
+        if (e.getX() > 447 && e.getY() > 300 && e.getX() < 477 && e.getY() < 330 ) {
+          System.out.print("BOUTON TVONOFF\n");
+    
+        }
+        if (e.getX() > 734 && e.getY() > 300 && e.getX() < 764 && e.getY() < 330 ) {
+          System.out.print("BOUTON RADIOONOFF\n");
+    
+        }
+    }} );
+
     Telecommande telecommandeRadio = new Telecommande(new Commande_RadioOn(radio), new Commande_RadioOff(radio),
         new Commande_RadioPrevStation(radio), new Commande_RadioNextStation(radio), new Commande_RadioVolumeDown(radio),
         new Commande_RadioVolumeUp(radio));
 
     // Création télécommande console
-    Television television = new Television();
+   
     Telecommande telecommandeTelevision = new Telecommande(new Commande_TelevisionOn(television),
         new Commande_TelevisionOff(television), new Commande_TelevisionPrevChannel(television),
         new Commande_TelevisionNextChannel(television), new Commande_TelevisionVolumeDown(television),
@@ -126,5 +127,35 @@ public class Main extends JFrame implements MouseListener {
     telecommandeMultiple.pressBtn2(); // TV & Radio OFF
 
     // Window window = new Window(telecommandeMultiple);
+  }
+
+  @Override
+  public void mouseClicked(MouseEvent e) {
+    // TODO Auto-generated method stub
+
+  }
+
+  @Override
+  public void mousePressed(MouseEvent e) {
+    // TODO Auto-generated method stub
+
+  }
+
+  @Override
+  public void mouseReleased(MouseEvent e) {
+    // TODO Auto-generated method stub
+
+  }
+
+  @Override
+  public void mouseEntered(MouseEvent e) {
+    // TODO Auto-generated method stub
+
+  }
+
+  @Override
+  public void mouseExited(MouseEvent e) {
+    // TODO Auto-generated method stub
+
   }
 }
