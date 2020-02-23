@@ -2,9 +2,9 @@ public class Television {
 
     private int volume = 0;
     private int channel = 1;
-    private int numChannel = 10;
+    private int numChannel = 8;
     private int maxVolume = 30;
-    private boolean state = false;
+    public boolean state = false;
 
     public void on(){
         System.out.println("TV On");
@@ -51,4 +51,13 @@ public class Television {
         }
         System.out.println("Vous êtes sur la chaîne:" + this.channel);
     }
+
+    public int getCurrentChannel(){
+        return this.channel;
+    }
+
+    public int getCurrentVolume(){
+        return this.volume;
+    }
+    
 }

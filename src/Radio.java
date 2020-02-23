@@ -2,8 +2,8 @@ public class Radio {
     private int volume = 0;
     private int station = 1;
     private int maxVolume = 10;
-    private int maxStation = 10;
-    private boolean state = false;
+    private int maxStation = 5;
+    public boolean state = false;
 
     public void on(){
         System.out.println("Radio On");
@@ -51,4 +51,11 @@ public class Radio {
         System.out.println("Vous êtes sur la station:" + this.station);
     }
 
+    public int getCurrentStation(){
+        return this.station;
+    }
+
+    public int getCurrentVolume(){
+        return this.volume;
+    }
 }

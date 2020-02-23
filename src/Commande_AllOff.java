@@ -10,8 +10,12 @@ public class Commande_AllOff implements Icommande {
 
     @Override
     public void execute() {
-        this.radio.off();
+        if(this.radio.state==true){
+            this.radio.off();
+        }
+        if(this.television.state==true){
         this.television.off();
+        }
     }
 
     public  void undo() {

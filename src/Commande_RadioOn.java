@@ -9,8 +9,9 @@ public class Commande_RadioOn implements Icommande {
 
     @Override
     public void execute() {
-
-        this.radio.on();
+        if(this.radio.state==false){
+            this.radio.on();
+        }
     }
 
     @Override
