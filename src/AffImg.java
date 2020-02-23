@@ -96,7 +96,7 @@ public class AffImg extends JPanel {
 			clip=clip5;
 		  }
 		  if(clip!=null){
-		  float sound = (radio.getCurrentVolume())/5;
+		  float sound = (radio.getCurrentVolume());
 		  FloatControl volumeControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 			volumeControl.setValue(20f * (float) Math.log10(sound));
 			}

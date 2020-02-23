@@ -1,7 +1,7 @@
 public class Radio {
     private int volume = 0;
     private int station = 1;
-    private int maxVolume = 10;
+    private int maxVolume = 3;
     private int maxStation = 5;
     public boolean state = false;
 
